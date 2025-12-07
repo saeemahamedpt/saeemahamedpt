@@ -1,23 +1,193 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
-  <style>
-    body { font-family: Arial; margin: 40px; }
-    h1 { color: #2c3e50; }
-    .projects { margin-top: 20px; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saeem Ahamed · Portfolio</title>
+  <meta name="description" content="Portfolio of Saeem Ahamed – Application Analyst (ERP) and PeopleSoft Lead" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>/* Inline extras for hero avatar */
+    .avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#60a5fa,#22d3ee); display:flex; align-items:center; justify-content:center; color:#081016; font-weight:800; font-size:36px}
+    .meta{display:grid; gap:8px}
+    .meta div{display:flex; align-items:center; gap:8px}
+    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap:16px}
+    @media (max-width: 860px){.hero{grid-template-columns: 1fr}}
   </style>
 </head>
 <body>
-  <h1>Hello, I'm Saeem Ahamed P T</h1>
-  <p>Application Analyst | ERP Expert</p>
-  <div class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Search-to-PDF Tool (Coming Soon)</li>
-      <li>ERP Integrations</li>
-    </ul>
-  </div>
+  <header>
+    <div class="inner container">
+      <strong>Saeem Ahamed</strong>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#references">References</a>
+        <button id="mode-toggle" class="btn toggle" aria-label="Toggle color mode">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero container" id="about">
+    <div class="card">
+      <div style="display:flex; gap:16px; align-items:center">
+        <div class="avatar" aria-hidden="true">SA</div>
+        <div>
+          <h1 class="title">Saeem Ahamed P T</h1>
+          <p class="subtitle">Application Analyst (ERP) · PeopleSoft Development Lead</p>
+          <div class="chips">
+            <span class="chip">PeopleSoft HCM</span>
+            <span class="chip">Fluid UI</span>
+            <span class="chip">Event Mapping</span>
+            <span class="chip">REST/IB Integrations</span>
+            <span class="chip">Agile</span>
+          </div>
+        </div>
+      </div>
+      <div class="two-col" style="margin-top:16px">
+        <div class="meta">
+          <div>📧 <a href="mailto:saeemabdulsamed@gmail.com">saeemabdulsamed@gmail.com</a></div>
+          <div>📱 <a href="tel:+919962659294">+91 9962659294</a></div>
+          <div>📍 Doha, Qatar</div>
+        </div>
+        <p>
+          Results-driven Application Analyst and PeopleSoft Development Lead with 10+ years across UN ESCAP, Oracle, DXC, and University of Doha for Science and Technology. Experienced in upgrades, Fluid design, Event Mapping, integrations, and leading cross-functional teams from discovery to delivery.
+        </p>
+      </div>
+      <div style="margin-top:16px; display:flex; gap:12px">
+        <a class="btn-primary btn" href="#experience">View Experience</a>
+        <a class="btn" href="#projects">Featured Projects</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="section-title">Highlights</h3>
+      <ul>
+        <li>Led integration of AI models into PeopleSoft to accelerate recruitment.</li>
+        <li>Owned PeopleTools upgrades (8.54→8.57, 8.60→8.61) and PUM upgrades (HCM 9.2.17→9.2.41).</li>
+        <li>Established Fluid design standards and onboarding flows; promoted Event Mapping adoption.</li>
+        <li>Hands-on: App Engine, App Packages, Elastic Search, REST/IB APIs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container" id="experience">
+    <h2 class="section-title">Experience Timeline</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-card">
+          <div class="tl-head"><div class="tl-role">Application Analyst</div><div>2024 – Present</div></div>
+          <div class="tl-org">University of Doha for Science and Technology · Doha, Qatar</div>
+          <ul>
+            <li>Support & Maintenance for Absence Management, Core HR, and Payroll.</li>
+            <li>Technical support to HR; enhancements and feature development.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-card">
+          <div class="tl-head"><div class="tl-role">Development Lead</div><div>2019 – 2024</div></div>
+          <div class="tl-org">United Nations – ESCAP · Bangkok, Thailand</div>
+          <ul>
+            <li>Managed 12+ engineers; drove AI-assisted recruitment in PeopleSoft.</li>
+            <li>PUM upgrade HCM 9.2.17 → 9.2.41; Tools 8.54 → 8.57.</li>
+            <li>Event Mapping, Fluid standards; integrations with 3rd-party and in-house APIs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-card">
+          <div class="tl-head"><div class="tl-role">Senior Application Engineer</div><div>2015 – 2019</div></div>
+          <div class="tl-org">Oracle India Pvt Ltd · Bengaluru, India</div>
+          <ul>
+            <li>PeopleSoft development; classic → Fluid conversions; Agile practices.</li>
+            <li>Page & Field Configurator; Oracle JET/ADF (Public Sector Cloud).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-card">
+          <div class="tl-head"><div class="tl-role">Associate Professional – Application Delivery</div><div>2012 – 2015</div></div>
+          <div class="tl-org">CSC India / DXC Technologies · Chennai, India</div>
+          <ul>
+            <li>Support for PeopleSoft NA Payroll; troubleshooting, bug fixes, enhancements.</li>
+            <li>Campus Solutions implementation for a university in Abu Dhabi.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills">
+      <div class="skill"><strong>PeopleCode / App Packages</strong><div class="bar"><span style="width:92%"></span></div></div>
+      <div class="skill"><strong>App Engine</strong><div class="bar"><span style="width:90%"></span></div></div>
+      <div class="skill"><strong>Fluid UI</strong><div class="bar"><span style="width:88%"></span></div></div>
+      <div class="skill"><strong>Event Mapping</strong><div class="bar"><span style="width:86%"></span></div></div>
+      <div class="skill"><strong>REST / IB Integrations</strong><div class="bar"><span style="width:84%"></span></div></div>
+      <div class="skill"><strong>SQL</strong><div class="bar"><span style="width:82%"></span></div></div>
+      <div class="skill"><strong>Elastic Search</strong><div class="bar"><span style="width:80%"></span></div></div>
+    </div>
+    <p style="color:var(--muted); margin-top:12px">(Levels are indicative; adjust in <code>index.html</code> by changing the bar widths.)</p>
+  </section>
+
+  <section class="container" id="projects">
+    <h2 class="section-title">Project Accomplishments</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>PeopleTools Upgrades</h3>
+        <p>Upgrades from 8.54→8.57 and 8.60→8.61; adoption of Event Mapping frameworks.</p>
+      </div>
+      <div class="card">
+        <h3>PUM Upgrades</h3>
+        <p>HCM PUM upgrade 12→41; HCM 9.2.17→9.2.41 program alignment.</p>
+      </div>
+      <div class="card">
+        <h3>ELM Re-Implementation</h3>
+        <p>Re-implemented PeopleSoft ELM with improved UX and onboarding flows.</p>
+      </div>
+      <div class="card">
+        <h3>Campus Solutions</h3>
+        <p>Implementation for University in Abu Dhabi; student lifecycle processes.</p>
+      </div>
+      <div class="card">
+        <h3>Fluid Dashboards</h3>
+        <p>Role-based dashboards; set standards for Fluid design across the team.</p>
+      </div>
+      <div class="card">
+        <h3>Azure SSO Integration</h3>
+        <p>Integrated Azure-based single sign-on for streamlined access.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="references">
+    <h2 class="section-title">References</h2>
+    <div class="grid">
+      <div class="ref">
+        <strong>Abdul Gafoor</strong><br/>
+        Principal Application Engineer · Oracle India Pvt Ltd<br/>
+        📱 +91 96200 50972 · 📧 <a href="mailto:gafoorkoduvally@gmail.com">gafoorkoduvally@gmail.com</a>
+      </div>
+      <div class="ref">
+        <strong>Santa Maria Nancy</strong><br/>
+        Colleague<br/>
+        📱 +65 9481 6353 · 📧 <a href="mailto:santamarianancy@gmail.com">santamarianancy@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Saeem Ahamed · Built with HTML/CSS/JS · Dark/Light mode
+  </footer>
+
+  <script src="assets/script.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
