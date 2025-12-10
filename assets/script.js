@@ -1,6 +1,5 @@
 
 console.log("[AI Widget] JS loaded");
-window.addEventListener("error", e => console.error("[GlobalError]", e.error || e.message));
 
 const toggle = document.querySelector('#mode-toggle');
 toggle?.addEventListener('click', () => {
@@ -19,7 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       target.scrollIntoView({behavior:'smooth'});
     }
   })
-})
+});
 
 // new changes begin 
 
