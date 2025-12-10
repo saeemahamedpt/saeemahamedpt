@@ -1,4 +1,7 @@
 
+console.log("[AI Widget] JS loaded");
+window.addEventListener("error", e => console.error("[GlobalError]", e.error || e.message));
+
 const toggle = document.querySelector('#mode-toggle');
 toggle?.addEventListener('click', () => {
   document.documentElement.classList.toggle('light');
