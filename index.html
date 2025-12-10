@@ -136,7 +136,80 @@
     </div>
     <p style="color:var(--muted); margin-top:12px">(Levels are indicative; adjust in <code>index.html</code> by changing the bar widths.)</p>
   </section>
+<!-- New code  begin-->
 
+<!-- === Invoice AI Extractor Widget === -->
+<section id="invoice-ai-widget" class="ai-widget">
+  <h2>Invoice → ERP JSON (AI Assistant)</h2>
+
+  <div class="ai-row">
+    <label for="employeeId">Employee ID</label>
+    <input id="employeeId" type="text" placeholder="EMP00123" />
+  </div>
+
+  <div class="ai-row">
+    <label for="requestNumber">Request Number</label>
+    <input id="requestNumber" type="text" placeholder="REQ-2025-001" />
+  </div>
+
+  <div class="ai-row">
+    <label for="fileInput">Upload Invoice/Receipt (PDF/Image)</label>
+    <input id="fileInput" type="file" accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff" />
+  </div>
+
+  <div class="ai-actions">
+    <button id="invokeBtn">Invoke AI Assistant</button>
+    <span id="statusText" class="status"></span>
+  </div>
+
+  <hr />
+
+  <!-- Results -->
+  <div id="resultContainer" class="result-container" hidden>
+    <h3>Extracted Result</h3>
+
+    <div class="totals">
+      <div><strong>School Name:</strong> <span id="schoolName"></span></div>
+      <div><strong>Dependents Name:</strong> <span id="dependentName"></span></div>
+      <div><strong>Currency:</strong> <span id="currency"></span></div>
+      <div><strong>Total Fee (Invoice):</strong> <span id="totalFee"></span></div>
+    </div>
+
+    <h4>Fee Items</h4>
+    <table class="fee-table" id="feeTable">
+      <thead>
+        <tr>
+          <th>Fee Item Name</th>
+          <th>Fee Item Amount</th>
+          <th>Excluded Flag</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="deviationBanner" class="deviation-banner" hidden>
+       <strong>Deviation detected!</strong>
+      <div>
+        <span>Calculated Total Fee (App): </span><span id="calcTotalApp"></span>
+        &nbsp;|&nbsp;
+        <span>Difference: </span><span id="difference"></span>
+      </div>
+    </div>
+
+    <details class="auth-details">
+      <summary>Authenticity & Validation Checks</summary>
+      <pre id="authBlock"></pre>
+    </details>
+
+    <details class="raw-json">
+      <summary>Raw JSON</summary>
+      <pre id="rawJson"></pre>
+    </details>
+  </div>
+</section>
+<!-- === /Invoice AI Extractor Widget === -->
+<!-- New code  end>
+  
   <section class="container" id="projects">
     <h2 class="section-title">Project Accomplishments</h2>
     <div class="grid">
